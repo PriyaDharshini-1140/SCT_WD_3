@@ -1,0 +1,306 @@
+<!-- =====================================================
+     ULTIMATE TIC TAC TOE - HTML
+===================================================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Ultimate Tic Tac Toe
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+
+    <div class="background"></div>
+
+    <!-- Main Container -->
+
+    <div class="game-container">
+
+        <!-- Header -->
+
+        <header>
+
+            <h1>
+                🎮 Ultimate Tic Tac Toe
+            </h1>
+
+            <button
+                id="themeToggle">
+                🌙 Theme
+            </button>
+
+        </header>
+
+        <!-- Player Setup -->
+
+        <section class="setup-panel">
+
+            <input
+                type="text"
+                id="playerName"
+                placeholder="Enter Your Name">
+
+            <select id="difficulty">
+
+                <option value="easy">
+                    Easy AI
+                </option>
+
+                <option value="medium">
+                    Medium AI
+                </option>
+
+                <option value="hard">
+                    Hard AI
+                </option>
+
+            </select>
+
+            <select id="roundSelect">
+
+                <option value="3">
+                    Best of 3
+                </option>
+
+                <option value="5">
+                    Best of 5
+                </option>
+
+                <option value="7">
+                    Best of 7
+                </option>
+
+            </select>
+
+            <button id="startBtn">
+                Start Match
+            </button>
+
+        </section>
+
+        <!-- Scoreboard -->
+
+        <section class="scoreboard">
+
+            <div class="score-card">
+
+                <h3>
+                    👤 Player
+                </h3>
+
+                <p id="playerScore">
+                    0
+                </p>
+
+            </div>
+
+            <div class="score-card">
+
+                <h3>
+                    🤖 Computer
+                </h3>
+
+                <p id="computerScore">
+                    0
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Status -->
+
+        <h2 id="status">
+
+            Enter your name and start!
+
+        </h2>
+
+        <!-- Board -->
+
+        <section class="board">
+
+            <div
+                class="cell"
+                data-index="0"></div>
+
+            <div
+                class="cell"
+                data-index="1"></div>
+
+            <div
+                class="cell"
+                data-index="2"></div>
+
+            <div
+                class="cell"
+                data-index="3"></div>
+
+            <div
+                class="cell"
+                data-index="4"></div>
+
+            <div
+                class="cell"
+                data-index="5"></div>
+
+            <div
+                class="cell"
+                data-index="6"></div>
+
+            <div
+                class="cell"
+                data-index="7"></div>
+
+            <div
+                class="cell"
+                data-index="8"></div>
+
+        </section>
+
+        <!-- Buttons -->
+
+        <div class="action-buttons">
+
+            <button
+                id="restartBtn">
+
+                🔄 Restart Round
+
+            </button>
+
+            <button
+                id="newMatchBtn">
+
+                🏆 New Match
+
+            </button>
+
+        </div>
+
+        <!-- Statistics -->
+
+        <section class="stats-panel">
+
+            <h3>
+                📊 Statistics
+            </h3>
+
+            <p>
+                Total Games :
+                <span id="totalGames">
+                    0
+                </span>
+            </p>
+
+            <p>
+                Wins :
+                <span id="wins">
+                    0
+                </span>
+            </p>
+
+            <p>
+                Losses :
+                <span id="losses">
+                    0
+                </span>
+            </p>
+
+            <p>
+                Draws :
+                <span id="draws">
+                    0
+                </span>
+            </p>
+
+        </section>
+
+        <!-- Achievements -->
+
+        <section class="badges">
+
+            <h3>
+                🏅 Achievements
+            </h3>
+
+            <div
+                id="achievementList">
+
+                No Achievements Yet
+
+            </div>
+
+        </section>
+
+        <!-- Match History -->
+
+        <section class="history">
+
+            <h3>
+                📜 Match History
+            </h3>
+
+            <ul id="historyList">
+
+            </ul>
+
+        </section>
+
+    </div>
+
+    <!-- Winner Modal -->
+
+    <div id="winnerModal" class="modal">
+
+        <div class="modal-content">
+
+            <h2
+                id="winnerTitle">
+            </h2>
+
+            <button id="playAgain">
+
+                Play Again
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Audio -->
+
+    <audio id="clickSound" src="sounds/click.mp3"></audio>
+
+    <audio id="loseSound" src="sounds/lose.mp3"></audio>
+
+    <audio id="winSound" src="sounds/win.mp3"></audio>
+
+
+    <!-- Confetti Library -->
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
